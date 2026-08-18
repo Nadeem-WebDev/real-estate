@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-obsidian font-body text-bone antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Lenis requirement: it drives scroll itself, so native smooth must be off. */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  ::selection {
+    @apply bg-gold text-obsidian;
+  }
+
+  /* Visible keyboard focus, suppressed for pointer users. */
+  :focus-visible {
+    outline: 1px solid #d4af37;
+    outline-offset: 3px;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    -webkit-text-fill-color: #fafaf8;
+    -webkit-box-shadow: 0 0 0 1000px #0d0d0e inset;
+    transition: background-color 9999s ease-in-out 0s;
+  }
+}
+
+@layer components {
+  /* Small caps eyebrow used as the page's structural label system. */
+  .marker {
+    @apply font-body text-[10px] font-medium uppercase tracking-marker text-gold/70;
+  }
+
+  .rule {
+    @apply h-px w-full bg-white/[0.07];
+  }
+
+  /* Underline that draws in from the left on hover. */
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 h-px w-0 bg-gold transition-all duration-500 ease-cinematic;
+  }
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Native cursor is replaced by the custom ring on fine-pointer devices only. */
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    cursor: none;
+  }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Orange Sun Background -->
+  <circle cx="50" cy="48" r="32" fill="#F48A1D" />
+  
+  <!-- Left Base Line -->
+  <rect x="18" y="75" width="12" height="3" fill="#004781" />
+  <!-- Right Base Line -->
+  <rect x="70" y="75" width="12" height="3" fill="#004781" />
+
+  <!-- Outer Left Building -->
+  <path d="M 27 78 V 68 L 33 62 V 78 Z" fill="#004781" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+  
+  <!-- Inner Left Building -->
+  <path d="M 35 78 V 58 L 41 52 V 78 Z" fill="#004781" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+  
+  <!-- Outer Right Building -->
+  <path d="M 73 78 V 68 L 67 62 V 78 Z" fill="#004781" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+  
+  <!-- Inner Right Building -->
+  <path d="M 65 78 V 58 L 59 52 V 78 Z" fill="#004781" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+
+  <!-- Center Arrow Building -->
+  <path d="M 44 78 V 50 H 38 L 50 36 L 62 50 H 56 V 78 Z" fill="#004781" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+</svg>

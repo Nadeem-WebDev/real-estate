@@ -10,6 +10,8 @@ import Contact from './components/Contact';
 import WhatsAppFab from './components/WhatsAppFab';
 import Footer from './components/Footer';
 import { SITE } from './data/site';
+import Transactions from './components/Transactions';
+import StampDuty from './components/StampDuty';
 
 /**
  * Entry curtain. Holds for a beat so the hero's background image has time to
@@ -72,6 +74,8 @@ export default function App() {
       <main>
         <Hero />
         <Properties />
+        <Transactions />
+        <StampDuty />
         <Broker />
         <Contact />
       </main>
